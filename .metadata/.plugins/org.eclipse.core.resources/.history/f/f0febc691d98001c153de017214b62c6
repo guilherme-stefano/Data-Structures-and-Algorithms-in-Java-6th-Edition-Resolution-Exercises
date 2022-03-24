@@ -1,0 +1,21 @@
+package C122;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class AllPossibleStrings {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public static ArrayList<String> PossibleStrings(String combination){
+		ArrayList<String> returnList = new ArrayList<String>();
+		for(char cumrrentChar : combination.toCharArray() ){
+			returnList.add(cumrrentChar + "");
+		}
+	}
+
+}

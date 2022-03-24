@@ -1,0 +1,29 @@
+package P129;
+
+import java.util.Date;
+import java.util.Random;
+
+public class BirthDayParadox {
+
+	public Date GenerateBirthDay() {
+		Random random = new Random();
+		int year = random.nextInt(1950, 2010);
+		int mounth = random.nextInt(1, 12);
+		int lastDay = 
+				mounth == 2 ? 28 : 
+				  ((mounth == 1 || 
+					mounth == 3 || 
+					mounth == 5 ||
+					mounth == 7 || 
+					mounth == 8 ||
+					mounth == 12) 
+				? 31 : 30);
+		int day = random.nextInt(1, lastDay);		
+		
+		Date birthDay =  new Date(year,mounth,day );
+		
+		return birthDay;
+	}
+
+}
+

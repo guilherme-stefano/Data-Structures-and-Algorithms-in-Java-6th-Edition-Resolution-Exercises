@@ -1,0 +1,10 @@
+package R213;
+
+public class TestCastClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

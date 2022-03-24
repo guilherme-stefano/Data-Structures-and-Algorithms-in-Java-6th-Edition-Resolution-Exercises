@@ -1,0 +1,10 @@
+package R214;
+
+
+public class OutOfBoundsTryCatch {
+	
+	public static void main(String[] args) {
+
+	}
+	
+}

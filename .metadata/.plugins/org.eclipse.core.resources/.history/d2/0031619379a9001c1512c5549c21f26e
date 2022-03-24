@@ -1,0 +1,21 @@
+package R213;
+
+public class TestCastClass {
+
+	public class Horse {
+		public int height;
+		
+		public void eat() {
+			System.out.println("i eat");
+		}
+	}
+	
+	
+	
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,33 @@
+package C117;
+
+public class CheckDistinctElementsEven {
+
+	public static void main(String[] args) {
+		int[] integers = new int[] {2,2,1,1,1};
+		boolean hasEvenProduct = CheckPairProductEven(integers);
+		System.out.print("The array " + (hasEvenProduct ? "has" : "hasn't") + " distinct elements with even product" );
+	}
+	
+	public static boolean CheckPairProductEven(int[] integers) {
+		for(int i = 0 ; i < integers.length ; i++  ) {
+			int n = integers[i];
+			boolean isUnique; 
+			
+			for(int j = i + 1 ; j < integers.length ; j++  ) {
+				int m = integers[j];
+				isUnique = n == m ? false : true;
+			}
+			
+			for(int m : integers) {
+				int product = n * m ;
+				if(isUnique && (product % 2 == 0)) {
+					return true;
+				}
+			}
+		}
+		
+		return false;
+
+	}
+
+}

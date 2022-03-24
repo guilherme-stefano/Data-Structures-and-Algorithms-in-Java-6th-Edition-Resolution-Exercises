@@ -1,0 +1,40 @@
+package R213;
+
+public class TestCastClass {
+
+	
+	
+	public static void main(String[] args) {
+		Horse h = new Horse();
+
+	}
+	
+
+	
+	
+
+}
+
+class Horse {
+	public int height;
+	
+	public void eat() {
+		System.out.println("i ate");
+	}
+}
+
+class Equitrarian {
+	public int weight;
+	
+	public void run() {
+		System.out.println("i runed");
+	}
+}
+
+class Runner {
+	public int color;
+	
+	public void trote() {
+		System.out.println("i troted");
+	}
+}

@@ -1,0 +1,17 @@
+package R214;
+
+import java.util.Scanner;
+
+public class OutOfBoundsTryCatch {
+	
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);   
+		System.out.print("Enter the size of Array: ");
+		int sizeArray =  input.nextInt();
+		
+
+	}
+	
+	
+	
+}

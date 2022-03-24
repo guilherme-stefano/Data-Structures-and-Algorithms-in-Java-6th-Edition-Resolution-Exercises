@@ -1,0 +1,17 @@
+package C122;
+
+
+import java.util.List;
+
+public class AllPossibleStrings {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public static List<String> PossibleStrings(String combination){
+		
+	}
+
+}

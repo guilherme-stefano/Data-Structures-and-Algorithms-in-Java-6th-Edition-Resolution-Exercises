@@ -1,0 +1,72 @@
+package P129;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Random;
+
+import P128.WriteSentenceMultiple;
+
+public class BirthDayParadox {
+	
+	public static void main(String[] args) throws ParseException {
+		int[] birthDayParadoxTests = {5,10,15,20,25,100};
+		BirthDayParadox paradox = new BirthDayParadox();
+		
+		for(int numberPeople : birthDayParadoxTests) {
+			Date[] birthDays = paradox.GenerateBirthDays(numberPeople);
+			int matches = paradox.NumberMatches(birthDays);
+			
+			System.out.println("For " + numberPeople + " people the number of same birthDays was " + matches );
+		}
+	}
+	
+	public Date[] GenerateBirthDays(int numberPeople) throws ParseException {
+		Date[] birthDays = new Date[numberPeople];
+		
+		for(int i = 0; i<numberPeople; i++) {
+			birthDays[i] = GenerateBirthDay();
+		}
+		return birthDays;
+	}
+
+	public int NumberMatches(Date[] birthDays) {
+		int equals = 0;
+		
+		for(int i = 0; i<birthDays.length; i++) {
+			Date date = birthDays[i];
+			for(int j = 0; j<birthDays.length; j++) {
+				Date dateToCompare = birthDays[j];
+				if(i!=j && date == dateToCompare) {
+					equals++;
+				}
+			}
+		}
+		return equals;
+	}
+	
+	public Date GenerateBirthDay() throws ParseException {
+		Random random = new Random();
+		int rangeYear = 2010 - 1950 + 1;
+		int year =  random.nextInt(rangeYear) + 1950;
+		int rangeMounth = 12 - 1 + 1;
+		int mounth =  random.nextInt(rangeMounth) + 1;
+		int lastDay = 
+				mounth == 2 ? 28 : 
+				  ((mounth == 1 || 
+					mounth == 3 || 
+					mounth == 5 ||
+					mounth == 7 || 
+					mounth == 8 ||
+					mounth == 12) 
+				? 31 : 30);
+		int rangeday = lastDay - 1 + 1;
+		int day = random.nextInt(rangeday) + 1;		
+		String date_string = day + "-" + mounth + "-" + year;
+	    SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");      
+	    Date birthDay = formatter.parse(date_string);      
+		return birthDay;
+	}
+
+}
+
