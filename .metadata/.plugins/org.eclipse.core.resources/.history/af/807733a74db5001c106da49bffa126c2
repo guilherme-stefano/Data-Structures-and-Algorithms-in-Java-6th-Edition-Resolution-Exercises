@@ -1,0 +1,5 @@
+package C224;
+
+public class ProgressionSubtractor extends Progression {
+	
+}

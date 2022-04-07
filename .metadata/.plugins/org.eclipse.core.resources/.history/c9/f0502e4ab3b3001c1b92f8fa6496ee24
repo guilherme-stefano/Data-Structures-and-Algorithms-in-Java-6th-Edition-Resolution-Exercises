@@ -1,0 +1,9 @@
+package C221;
+
+public class C extends B{
+	public int x;
+	
+	public void access() {
+		this.x = 1;
+	}
+}

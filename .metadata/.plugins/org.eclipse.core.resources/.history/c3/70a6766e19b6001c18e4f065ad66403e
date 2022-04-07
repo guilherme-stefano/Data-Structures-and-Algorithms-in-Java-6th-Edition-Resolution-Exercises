@@ -1,0 +1,12 @@
+package C226;
+
+public class Main {
+
+	public static void main(String[] args) {
+		SquareRoot sub = new SquareRoot(64);
+		
+		sub.printProgression(3);
+
+	}
+
+}

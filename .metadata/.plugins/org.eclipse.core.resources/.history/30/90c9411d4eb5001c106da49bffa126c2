@@ -1,0 +1,20 @@
+package C224;
+
+public class ProgressionSubtractor extends Progression {
+	protected long prev ; 
+	public ProgressionSubtractor(){
+		super(2);
+		prev = 200;
+	}
+	
+	public ProgressionSubtractor(long current, long prev){
+		super(current);
+		this.prev = prev;
+	}
+	
+	 protected void advance() {
+		 current = current - prev;
+		 prev = current + prev;
+	 }
+	
+}

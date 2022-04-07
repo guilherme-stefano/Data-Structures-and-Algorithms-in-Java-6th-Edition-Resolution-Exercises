@@ -1,0 +1,5 @@
+package C221;
+
+public class B extends B {
+	public int x;
+}
