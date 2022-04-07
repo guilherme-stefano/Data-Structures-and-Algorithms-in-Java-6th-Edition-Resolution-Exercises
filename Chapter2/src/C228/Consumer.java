@@ -1,0 +1,67 @@
+package C228;
+
+public class Consumer {
+
+	//VARIAVEIS
+	
+	FIFO fila; //fila que ser usada como memoria compartilhada entre threads consumidor e produtor
+
+	 
+	public Consumer(FIFO fila){
+	
+	   this.fila = fila; //variavel fila referencia uma fila passada como argumento
+	
+	}
+	
+	
+	 //consumidor
+	
+	   public void consume()
+	
+	   {
+	
+	      int elemento;
+	
+	     
+	
+	      while(true)
+	
+	      {
+	
+	          synchronized (this)//inicia operacao atomica
+	
+	      {
+	
+	        while(this.fila.vazia())//se fila vazia
+	
+	        {
+	
+	            //System.out.println("consumidor Dormindo");
+	
+	            try{
+	
+	            wait();   //bloqueia o thread  
+	
+	               }  
+	
+	            catch (InterruptedException e){}
+	
+	        }
+	
+	         
+	
+	        //Se houver elemento na fila  
+	
+	        elemento = this.fila.dequeue(); //retira primeiro da fila
+	
+	        System.out.println("Elemento "+elemento+" consumido");  
+	
+	        notify(); //notifica que há espaço na fila    
+	
+	          }
+	
+	       }
+	
+	   }   
+}
+

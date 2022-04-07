@@ -1,0 +1,82 @@
+package C228;
+
+public class Programa
+
+{
+
+   public static void main(String[] args) throws InterruptedException
+
+   {
+
+   
+
+      //OBJETOS
+
+      FIFO fila = new FIFO(3); //fila de tamanho 3
+
+      Producer producer = new Producer(fila); /*fila é passado como buffer para novo Objeto ConsumerProducer*/
+      Consumer consumer = new Consumer(fila); /*fila é passado como buffer para novo Objeto ConsumerProducer*/
+
+     
+
+      Thread produtor = new Thread //cria um objeto Thread para o metodo produtor
+
+      (
+
+            new Runnable() /*Thread recebe interface Runnable como parametro, e roda seu método run como uma thread*/
+
+            {
+
+                public void run() //Runnable permite sobrescrever seu método run
+
+                {
+
+                    programa.produce(); //metodo produce do objeto ConsumerProducer sobrescreve metodo run
+
+                }
+
+            }
+
+      );
+
+      Thread consumidor = new Thread //cria uma thread para o metodo consumidor
+
+      (
+
+            new Runnable() 
+
+            {
+
+                public void run()
+
+                {
+
+                    programa.consume(); //método consume de ProducerConsumer rodará como thread
+
+                }
+
+            }
+
+      );  
+
+       
+
+      //INICIA PROGRAMA
+
+      //inicia as threads criadas
+
+      produtor.start(); 
+
+      consumidor.start();
+
+      //main abdica do controle - aguarda execucao das threads
+
+      produtor.join();
+
+      consumidor.join();      
+
+   }
+
+ 
+
+}
