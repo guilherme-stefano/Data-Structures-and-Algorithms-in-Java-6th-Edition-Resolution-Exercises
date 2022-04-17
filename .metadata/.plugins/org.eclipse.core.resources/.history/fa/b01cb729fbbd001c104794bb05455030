@@ -1,0 +1,23 @@
+package C229;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class Differentiate {
+	
+	private String PolynomialString;
+	private LinkedList<PolynomialTerm> Polynomial;
+	
+	Differentiate(String polynomial){
+		this.PolynomialString = polynomial;
+		buildPolynomialTerm();
+	}
+	
+	private void buildPolynomialTerm() {
+		LinkedList<String> PolynomialStringList = ; 
+		
+		
+	}
+	
+	
+}

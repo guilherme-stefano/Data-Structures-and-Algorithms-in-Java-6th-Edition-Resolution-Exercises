@@ -1,0 +1,36 @@
+package C229;
+
+import java.util.LinkedList;
+
+public class PolynomialTermFactory {
+
+	LinkedList<String> StringTerms;
+	
+	PolynomialTermFactory(LinkedList<String> terms){
+		this.StringTerms = terms;
+	}
+	
+	public LinkedList<PolynomialTerm> buildPolynomialTermList() {
+
+		LinkedList<PolynomialTerm> result = new LinkedList<PolynomialTerm>(); 
+		for(String term : this.StringTerms) {
+			result.add(this.buildPolynomialTerm(term));
+		}
+		
+		return result;
+	}
+	
+	private PolynomialTerm buildPolynomialTerm(String term) {
+		
+		if(term.contains("x^")) {
+			return new NDegreeTerm(term);
+		}
+		
+		if(term.contains("x")) {
+			return new OneDegreeTerm(term);
+		}
+		
+		return new ConstantTerm(term);
+	}
+	
+}

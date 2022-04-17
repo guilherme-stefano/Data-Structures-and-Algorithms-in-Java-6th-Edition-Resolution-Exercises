@@ -1,0 +1,14 @@
+package C229;
+
+public class OneDegreeTerm extends PolynomialTerm{
+	
+	public OneDegreeTerm(String Term) {
+		super(Term);
+	}
+
+	@Override
+	public String calculateDifferentiate() {
+		return null;
+	}
+	
+}

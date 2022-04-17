@@ -1,0 +1,13 @@
+package C229;
+
+public abstract class PollynomialTerm {
+	public String Term;
+	
+	public PollynomialTerm(String Term){
+		this.Term = Term;
+	}
+	
+	public abstract String CalculateDifferentiate();
+	
+	
+}

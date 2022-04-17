@@ -1,0 +1,11 @@
+package C229;
+
+public class PolynomialRegex {
+	private String PolynomialString;
+	
+	public PolynomialRegex(String PolynomialString){
+		this.Term = Term;
+	}
+	
+
+}

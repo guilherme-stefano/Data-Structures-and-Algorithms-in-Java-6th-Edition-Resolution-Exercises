@@ -1,0 +1,13 @@
+package C229;
+
+public abstract class ConstantTerm {
+	public String Term;
+	
+	public ConstantTerm(String Term){
+		this.Term = Term;
+	}
+	
+	public abstract String calculateDifferentiate();
+	
+	
+}

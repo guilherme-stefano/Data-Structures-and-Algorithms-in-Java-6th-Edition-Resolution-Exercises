@@ -1,0 +1,27 @@
+package C229;
+
+import java.util.LinkedList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class PolynomialRegex {
+	private String PolynomialString;
+	
+	public PolynomialRegex(String PolynomialString){
+		this.PolynomialString = PolynomialString;
+	}
+	
+	private LinkedList<String> GetStrings() {
+	
+		LinkedList<string> 
+		Pattern pattern = Pattern.compile("w3schools", Pattern.CASE_INSENSITIVE);
+	    Matcher matcher = pattern.matcher("Visit W3Schools!");
+	    
+	    while (matcher.find()) {
+	    	System.out.println(m.start());
+	    }
+	}
+	
+	
+
+}

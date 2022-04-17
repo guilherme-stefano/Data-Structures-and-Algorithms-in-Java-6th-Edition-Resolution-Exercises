@@ -1,0 +1,27 @@
+package C229;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class Differentiate {
+	
+	private String PolynomialString;
+	private LinkedList<PolynomialTerm> Polynomial;
+	
+	Differentiate(String polynomial){
+		this.PolynomialString = polynomial.trim();
+		this.Polynomial = new  LinkedList<PolynomialTerm>();
+		buildPolynomialTermList();
+	}
+	
+	private void buildPolynomialTermList() {
+		PolynomialRegex regex = new PolynomialRegex(this.PolynomialString);
+		LinkedList<String> polynomialStringList = regex.getStrings();
+		PolynomialTermFactory polynomialTermFactory = new PolynomialTermFactory(polynomialStringList);
+		this.Polynomial = polynomialTermFactory.buildPolynomialTermList();
+	}
+	
+	private buildPolynomialTerm
+	
+	
+}

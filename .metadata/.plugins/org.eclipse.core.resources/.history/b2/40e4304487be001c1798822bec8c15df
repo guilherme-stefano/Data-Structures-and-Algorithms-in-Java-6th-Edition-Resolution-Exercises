@@ -1,0 +1,17 @@
+package C229;
+
+import java.util.LinkedList;
+import java.util.regex.Pattern;
+
+public class OneDegreeTerm extends PolynomialTerm{
+	
+	public OneDegreeTerm(String Term) {
+		super(Term);
+	}
+
+	@Override
+	public String calculateDifferentiate() {
+		if(this.Term.length() == 2)
+	}
+	
+}

@@ -1,0 +1,10 @@
+package C229;
+
+public class Differentiate {
+	
+	public String Polynomial;
+	
+	Differentiate(String polynomial){
+		this.Polynomial = polynomial;
+	}
+}

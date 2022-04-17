@@ -1,0 +1,24 @@
+package C229;
+
+import java.util.LinkedList;
+
+public class PolynomialTermFactory {
+
+	LinkedList<String> Terms;
+	
+	PolynomialTermFactory(LinkedList<String> terms){
+		this.Terms = terms;
+	}
+	
+	private void buildPolynomialTermList() {
+
+		for(String polynomialString : this.Terms) {
+			build
+		}
+		
+		
+	}
+	
+	private buildPolynomialTerm
+	
+}
