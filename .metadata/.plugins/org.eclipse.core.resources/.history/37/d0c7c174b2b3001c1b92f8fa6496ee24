@@ -1,5 +1,0 @@
-package C221;
-
-public class B {
-	public int x;
-}

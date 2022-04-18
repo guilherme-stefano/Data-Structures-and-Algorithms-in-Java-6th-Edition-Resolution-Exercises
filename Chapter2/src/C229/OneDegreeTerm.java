@@ -1,0 +1,26 @@
+package C229;
+
+import java.util.LinkedList;
+import java.util.regex.Pattern;
+
+public class OneDegreeTerm extends PolynomialTerm{
+	
+	public OneDegreeTerm(String Term) {
+		super(Term);
+	}
+
+	@Override
+	public String calculateDifferentiate() {
+		PolynomialTermRegex regex = new PolynomialTermRegex(this.Term);
+		if(regex.hasNumberInBeginTerm()) {
+			return 
+				regex.hasSignal() ? 
+						Term.charAt(0)+ "" + Term.charAt(1) + ""
+					    : Term.charAt(0) + "";
+		}else {	
+			return regex.hasSignal() ? Term.charAt(0) + "1" : "1";
+		}
+		
+	}
+	
+}

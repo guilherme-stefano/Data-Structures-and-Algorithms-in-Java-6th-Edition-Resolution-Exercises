@@ -1,0 +1,24 @@
+package C229;
+
+public class NDegreeTerm extends PolynomialTerm{
+
+	private String Signal;
+	private float Number;
+	private int Exp;
+	
+	public NDegreeTerm(String Term) {
+		super(Term);
+		this.Signal = "";
+		this.Number = 0;
+	}
+
+	@Override
+	public String calculateDifferentiate() {
+		PolynomialTermRegex regex = new PolynomialTermRegex(this.Term);
+		this.Signal = regex.hasSignal() ? this.Term.charAt(0) + "" : "";
+		this.Number = regex.hasNumberInBeginTerm() ? 
+				(this.Signal == "" ? this.Term.charAt(0) : this.Term.charAt(1) ) : 0;
+		return null;
+	}
+	
+}

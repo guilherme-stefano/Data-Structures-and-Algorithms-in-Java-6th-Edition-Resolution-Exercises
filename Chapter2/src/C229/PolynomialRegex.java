@@ -1,0 +1,30 @@
+package C229;
+
+import java.util.LinkedList;
+import java.util.regex.MatchResult;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class PolynomialRegex {
+	private String PolynomialString;
+	
+	public PolynomialRegex(String PolynomialString){
+		this.PolynomialString = PolynomialString;
+	}
+	
+	public LinkedList<String> getStrings() {
+		LinkedList<String> resultList =  new LinkedList<String>();
+		Pattern pattern = Pattern.compile("([+-]?[^-+]+)", Pattern.CASE_INSENSITIVE);
+	    Matcher matcher = pattern.matcher(this.PolynomialString);
+	    
+	    while (matcher.find()) {
+	    	String match = matcher.group();
+	    	resultList.add(match);
+	    }
+	    
+	    return resultList;
+	}
+	
+	
+
+}

@@ -1,0 +1,16 @@
+package C229;
+
+public class NDegreeTerm extends PolynomialTerm{
+
+	public NDegreeTerm(String Term) {
+		super(Term);
+
+	}
+
+	@Override
+	public String calculateDifferentiate() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}
