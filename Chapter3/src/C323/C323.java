@@ -1,0 +1,1 @@
+//A linked list can be used to store de findings, and to see ho is winning i can count the user with high number of findings in the list 
