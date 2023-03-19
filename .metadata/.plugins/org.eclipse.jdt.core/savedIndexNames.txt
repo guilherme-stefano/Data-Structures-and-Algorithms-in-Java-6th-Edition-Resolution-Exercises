@@ -1,6 +1,7 @@
 INDEX VERSION 1.131+E:\source\Data-Structures-and-Algorithms-in-Java-6th-Edition-Resolution-Exercises\.metadata\.plugins\org.eclipse.jdt.core
 2982705214.index
 1606818066.index
+3064314919.index
 1865797976.index
 683747716.index
 443771319.index
