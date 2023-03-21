@@ -1,4 +1,4 @@
-package maximumElement;
+package R51;
 
 public class MaximumElement {
 	public static int FindMaximunElementArray( int[] array, int begin, int end) {
