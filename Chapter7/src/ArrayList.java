@@ -49,7 +49,7 @@ public class ArrayList<E> implements List<E> {
             throw new IllegalStateException("Array is full");
 
         if (size == data.length)    // not enough capacity
-            resize(2 ∗ data.length); // so double the current capacity
+            resize(2 * data.length); // so double the current capacity
             
         for (int k=size-1; k >= i; k--)
             // start by shifting rightmost
