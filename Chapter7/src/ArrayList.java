@@ -97,6 +97,7 @@ public class ArrayList<E> implements List<E> {
             temp[k] = data[k];  
         data = temp; // start using the new array
     }
+    
 }
 
 
